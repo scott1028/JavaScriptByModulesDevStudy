@@ -1,0 +1,14 @@
+node_modules
+dist
+.tmp
+.sass-cache
+app/components
+.idea
+app/.htaccess
+*.log
+.htaccess.override.js
+tests/log.html
+tests/output.xml
+tests/report.html
+tests/*.png
+bower_components
