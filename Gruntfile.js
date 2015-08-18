@@ -5,9 +5,11 @@ module.exports = function(grunt) {
 
     //
     var staticFileMiddleware = function(req, res, next) {
+        var finalhandler = require('finalhandler');  // if you no use this plugin, when client get nonexisted file, connect server will shutdown.
         var serveStatic = require('serve-static');
         var serve = serveStatic('./');
-        serve(req, res);
+        var done = finalhandler(req, res);
+        serve(req, res, done);
     };
 
 
